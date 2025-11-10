@@ -10,7 +10,12 @@
     "serve:ssr:ekyc-lpbank": "node dist/ekyc-lpbank/server/server.mjs",
     "prettier-fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md,html}\"",
     "prettier-check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md,html}\"",
-    "prepare": "husky install"
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,md,html}": [
+      "prettier --write"
+    ]
   },
   "private": true,
   "dependencies": {
